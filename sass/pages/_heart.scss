@@ -1,0 +1,56 @@
+/* Animation du coeur */
+
+.restaurants {
+  &_liste {
+      width: 95%;
+      margin: auto;
+      padding-bottom: 10px;
+      border: 1px solid $colour-backgroundintro;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      background-color: $colour-btnfont;
+      box-shadow: 0 0 10px $colour-shadow;
+      position: relative;
+      &:hover {
+          box-shadow: 0 0 10px $colour-primary;
+          cursor: pointer;
+      }
+      
+      &_heart {
+          font-size: 25px;
+          position: absolute;
+          right: 45px;
+          bottom: 45px;
+          @include coeur;
+      }
+  }
+}
+
+.resto {
+    background-color: $colour-backgroundintro;
+    border-radius: 50px 50px 0 0;
+    margin-top: -60px;
+    position: relative;
+    &_titre {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0px 0px 15px;
+        margin-bottom: -15px;
+        @include both {
+            justify-content: center;
+        }
+        &_nom {
+            font-family: "Shrikhand", sans-serif;
+            font-size: 1.6em;
+            @include both {
+                padding-right: 20px;
+            }
+            &_heart {
+                font-size: 25px;
+                margin: 0 50px 30px 0;  
+                @include coeur;
+            }
+        }
+    }   
+}

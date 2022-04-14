@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lien police Shrikhand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <!-- Lien police Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- Lien Font Awesome  -->
+  <script src="https://kit.fontawesome.com/6aba57833f.js" crossorigin="anonymous"></script>
+  <!-- Lien Feuille CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Ohmyfood</title>
+</head>
+
+<body id="main-wrap">
+  <!-- Structure du loader-->
+  <div class="loader">
+    <div class="loader__color">
+      <div></div>
+      <div></div>
+    </div>
+    <p>ohmyfood</p>
+  </div>
+  <!-- Structure header -->
+  <header>
+    <h1>ohmyfood</h1>
+    <div class="localisation">
+      <i class="fas fa-map-marker-alt"></i>
+      <input type="text" name="ville" placeholder="Paris, Belleville" />
+    </div>
+    <div class="slogan">
+      <h2>Réservez le menu qui vous convient</h2>
+      <p class="description">
+        Découvrez des restaurants d'exception, séléctionnés par nos soins.
+      </p>
+      <a href="#" class="explorer">
+        <p>Explorez nos restaurants</p>
+      </a>
+    </div>
+  </header>
+  <!-- Structure main -->
+  <main>
+    <!-- Section "Fonctionnement" -->
+    <section class="fonctionnement">
+      <h2>Fonctionnement</h2>
+      <div class="info-fonctionnement">
+        <a href="#" class="processus">
+          <p class="numero">1</p>
+          <div class="phase">
+            <i class="fas fa-mobile-alt fa-lg"></i>
+            <h3>Choisissez un restaurant</h3>
+          </div>
+        </a>
+        <a href="#" class="processus">
+          <p class="numero">2</p>
+          <div class="phase">
+            <i class="fas fa-list-ul fa-lg"></i>
+            <h3>Composez votre menu</h3>
+          </div>
+        </a>
+        <a href="#" class="processus">
+          <p class="numero">3</p>
+          <div class="phase">
+            <i class="fas fa-store fa-lg"></i>
+            <h3>Dégustez au restaurant</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Section "Restaurant" -->
+    <section class="restaurant">
+      <h2>Restaurant</h2>
+      <div class="choix-restaurant">
+        <!-- Restaurant "la palette du goût" -->
+        <a href="la_palette_du_gout.html" class="information-restaurant">
+          <p class="nouveau">Nouveau</p>
+          <picture>
+            <source media="(width: 375px)" srcset="ressources/images/la_palette_du_gout/mobile.jpg" />
+            <source media="(min-width: 376px) and (max-width: 768px) "
+              srcset="ressources/images/la_palette_du_gout/tablet.jpg" />
+            <source media="(min-width: 769px) " srcset="ressources/images/la_palette_du_gout/desktop.jpg" />
+            <img src="ressources/images/la_palette_du_gout/la_palette_du_gout.jpg" alt="la_palette_du_gout"
+              class="cover" />
+          </picture>
+          <div class="information">
+            <div class="nom-restaurant">
+              <h3>La palette du goût</h3>
+              <p class="quartier">Ménilmontant</p>
+            </div>
+            <div class="restaurants_liste_heart">
+              <i class="far fa-heart restaurants_liste_heart--empty"></i>
+              <i class="fas fa-heart restaurants_liste_heart--full"></i>
+            </div>
+          </div>
+        </a>
+        <!-- Restaurant "la note enchantée" -->
+        <a href="la_note_enchantee.html" class="information-restaurant">
+          <p class="nouveau">Nouveau</p>
+          <picture>
+            <source media="(width: 375px)" srcset="ressources/images/la_note_enchantee/mobile.jpg" />
+            <source media="(min-width: 376px) and (max-width: 768px) "
+              srcset="ressources/images/la_note_enchantee/tablet.jpg" />
+            <source media="(min-width: 769px) " srcset="ressources/images/la_note_enchantee/desktop.jpg" />
+            <img src="ressources/images/la_note_enchantee/la_note_enchantee.jpg" alt="la_note_enchantee"
+              class="cover" />
+          </picture>
+          <div class="information">
+            <div class="nom-restaurant">
+              <h3>La note enchantée</h3>
+              <p class="quartier">Charonne</p>
+            </div>
+            <div class="restaurants_liste_heart">
+              <i class="far fa-heart restaurants_liste_heart--empty"></i>
+              <i class="fas fa-heart restaurants_liste_heart--full"></i>
+            </div>
+          </div>
+        </a>
+        <!-- Restaurant "a la française" -->
+        <a href="a_la_francaise.html" class="information-restaurant">
+          <picture>
+            <source media="(width: 375px)" srcset="ressources/images/a_la_française/mobile.jpg" />
+            <source media="(min-width: 376px) and (max-width: 768px) "
+              srcset="ressources/images/a_la_française/tablet.jpg" />
+            <source media="(min-width: 769px) " srcset="ressources/images/a_la_française/desktop.jpg" />
+            <img src="ressources/images/a_la_française/a_la_française.jpg" alt="a_la_française" class="cover" />
+          </picture>
+          <div class="information">
+            <div class="nom-restaurant">
+              <h3>A la française</h3>
+              <p class="quartier">Cité Rouge</p>
+            </div>
+            <div class="restaurants_liste_heart">
+              <i class="far fa-heart restaurants_liste_heart--empty"></i>
+              <i class="fas fa-heart restaurants_liste_heart--full"></i>
+            </div>
+          </div>
+        </a>
+        <!-- Restaurant "le délice des sens" -->
+        <a href="le_delice_des_sens.html" class="information-restaurant">
+          <picture>
+            <source media="(width: 375px)" srcset="ressources/images/le_delice_des_sens/mobile.jpg" />
+            <source media="(min-width: 376px) and (max-width: 768px) "
+              srcset="ressources/images/le_delice_des_sens/tablet.jpg" />
+            <source media="(min-width: 769px) " srcset="ressources/images/le_delice_des_sens/desktop.jpg" />
+            <img src="ressources/images/le_delice_des_sens/le_delice_des_sens.jpg" alt="le_delice_des_sens"
+              class="cover" />
+          </picture>
+          <div class="information">
+            <div class="nom-restaurant">
+              <h3>Le délice des sens</h3>
+              <p class="quartier">Folie-Méricourt</p>
+            </div>
+            <div class="restaurants_liste_heart">
+              <i class="far fa-heart restaurants_liste_heart--empty"></i>
+              <i class="fas fa-heart restaurants_liste_heart--full"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <!-- Structure footer -->
+  <footer>
+    <h4>ohmyfood</h4>
+    <div class="infos">
+      <div class="partenariat">
+        <i class="fas fa-utensils"></i>
+        <p>Proposer un restaurant</p>
+      </div>
+      <div class="partenariat">
+        <i class="fas fa-hands-helping"></i>
+        <p>Devenir partenaire</p>
+      </div>
+      <p class="mentions-legales">Mentions légales</p>
+      <a href="mailto:contact-us@ohmyfood.com">
+        <p class="contact">Contact</p>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

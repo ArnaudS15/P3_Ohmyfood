@@ -1,0 +1,74 @@
+/* Main */
+
+main {
+  border: $border-display $main-border-color 1px;
+}
+
+/* Section - Fonctionnement */
+
+.fonctionnement {
+  border: $border-display $section-fonctionnement-border-color 1px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 65px;
+  h2 {
+    border: $border-display $section-h2-border-color 1px;
+    @include format_h2;
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 15%;
+  }
+}
+
+.info-fonctionnement {
+  border: $border-display $section-info-fonctionnement-border-color 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.processus {
+  border: $border-display $section-processus-border-color 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include vignette-etape;
+  margin: 25px 0px 0px 0px;
+}
+
+/* Section - Restaurant */
+
+.restaurant {
+  border: $border-display $section-restaurant-border-color 1px;
+  background-color: $section-restaurant-background-color;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    border: $border-display $section-h2-border-color 1px;
+    @include format_h2;
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 55px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 6.5%;
+  }
+}
+
+.choix-restaurant {
+  border: $border-display $section-choix-restaurant-border-color 1px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.information-restaurant {
+  position: relative;
+  @include vignette-restaurant;
+}

@@ -1,0 +1,158 @@
+// AFFICHAGE BORDURES
+
+$main-wrapper-border-display: solid;
+$border-display: none;
+
+// COULEURS BASE
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$grey: #f6f6f6;
+$thin: 3px;
+$thick: 9px;
+
+// Variables Couleurs
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+$colour-form: rgb(234, 234, 234);
+$colour-shadow: rgb(212, 212, 212);
+$colour-localisation:rgb(75, 75, 75);
+$colour-backgroundintro: rgb(246, 246, 246);
+$colour-bouton: linear-gradient(to left top, $colour-primary, $colour-secondary);
+$colour-btnfont: white;
+$colour-nouveau: darken($colour-tertiary, 50%);
+$colour-footer: rgb(53, 53, 53);
+$colour-fonctionnement-hover: rgb(245, 237, 255);
+
+// LISTING COULEURS BORDURES
+
+$main-wrapper-border-color: #ffffff;
+
+// Header - Page d'accueil
+
+$header-border-color: #007f46;
+$header-h1-border-color: #ff0000;
+
+$header-localisation-border-color: #ffb27f;
+$header-i-border-color: #0094ff;
+$header-input-border-color: #ff006e;
+
+$header-slogan-border-color: #ff7fed;
+$header-h2-border-color: #ff6a00;
+$header-description-border-color: #b6ff00;
+$header-explorer-border-color: #b6ff00;
+
+// Page d'accueil
+
+$main-border-color: #a0a0a0;
+
+// Fonctionnement
+
+$section-fonctionnement-border-color: #00ff21;
+$section-h2-border-color: #ff6a00;
+$section-info-fonctionnement-border-color: #7fffc5;
+$section-processus-border-color: #0026ff;
+$section-numero-border-color: #9356dc;
+$section-phase-border-color: #000000;
+$section-i-border-color: #0094ff;
+$section-h3-border-color: #ffd800;
+
+// Restaurant
+
+$section-restaurant-border-color: #7fc9ff;
+$section-choix-restaurant-border-color: #00ff90;
+$section-vignette-border-color: #4800ff;
+$section-information-border-color: #5b7f00;
+$section-nom-restaurant-border-color: #7f0000;
+$section-quartier-border-color: #b6ff00;
+
+// Footer
+$footer-border-color: #00ffff;
+$footer-h4-border-color: #c0c0c0;
+$footer-infos-border-color: #ff69b4;
+$footer-p-border-color: #b6ff00;
+$footer-partenariat-border-color: #7f6a00;
+$footer-i-border-color: #0094ff;
+
+// Header - Menu
+$header-menu-border-color: #007f46;
+$header-bandeau-menu-border-color: #ffb27f;
+$header-bandeau-menu-i-border-color: #0094ff;
+$header-bandeau-menu-h1-border-color: #ff0000;
+$header-menu-img-border-color: #ff00dc;
+
+// Main - Menu
+$main-carte-menu-border-color: #f6f6f6;
+
+// Section - Denomination restaurant
+$section-denomination-restaurant-border-color: #7fffc5;
+$section-designation-border-color: #ff6a00;
+$section-denomination-restaurant-i-border-color: #0094ff;
+
+// Section - Entrees plats desserts
+$section-entrees-plats-desserts-border-color: #004a7f;
+$section-intitule-plat-border-color: #ff00dc;
+$section-alimentation-border-color: #b6ff00;
+$section-trait-border-color: #0094ff;
+$section-choix-border-color: #ff45ab;
+$section-choix-plat-border-color: #3f7f47;
+$section-plat-border-color: #ff006e;
+$section-nom-plat-border-color: #ffd800;
+$section-info-plat-border-color: #000000;
+$section-composition-border-color: #b6ff00;
+$section-prix-border-color: #b6ff00;
+
+// Commander
+$div-commander-border-color: #8a2be2;
+$div-passer-la-commande-border-color: #b6ff00;
+
+// LISTING COULEURS BACKGROUNDS
+
+// Header - Page d'accueil
+$header-localisation-background-color: #eaeaea;
+$header-input-background-color: #eaeaea;
+
+$header-slogan-background-color: #f6f6f6;
+$header-explorer-background-color: linear-gradient(#ff79da, #9356dc);
+
+// Fonctionnement
+$section-numero-background-color: #9356dc;
+$section-phase-background-color: #f6f6f6;
+$section-hover-phase-background-color: #f5edff;
+
+// Section Restaurant
+$section-restaurant-background-color: #f6f6f6;
+$section-information-restaurant-background-color: #ffffff;
+
+// Footer
+$footer-background-color: #353535;
+
+// Main - Menu
+$main-carte-menu-background-color: #f6f6f6;
+
+// Zone Entrees plats desserts
+$section-trait-background-color: #99e4d0;
+$section-choix-plat-background-border-color: #f6f6f6;
+$section-plat-background-color: #ffffff;
+
+// Commander
+$div-commander-background-color: linear-gradient(#ff79da, #9356dc);
+
+// LISTING COULEURS 
+
+// Header
+$header-explorer-text-color: #ffffff;
+
+// Fonctionnement
+$section-numero-text-color: #ffffff;
+$section-i-fonctionnement-color: #7e7e7e;
+$section-hover-i-fonctionnement-color: #9356dc;
+
+// Footer
+$footer-i-color: #ffffff;
+$footer-h4-color: #ffffff;
+$footer-p-color: #ffffff;
+
+// Commander
+$div-commander-text-color: #ffffff;

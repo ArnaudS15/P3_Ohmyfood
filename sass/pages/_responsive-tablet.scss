@@ -1,0 +1,130 @@
+/* VERSION TABLETTE */
+
+@media (min-width: 375px) and (max-width: 768px) {
+  /* PARAMETRES GENERAUX */
+
+  /* Main Wrapper*/
+
+  #main-wrapper {
+    max-width: 768px;
+  }
+
+  /* Animation du loading spinner*/
+
+  .loader::after {
+    left: 30%;
+  }
+
+  /* Header */
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .slogan {
+    .explorer {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+  }
+
+  /* Section - Fonctionnement */
+
+  .processus {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* Section - Restaurant */
+
+  .restaurant {
+    h2 {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+  .information-restaurant {
+    margin-left: 5%;
+    margin-right: 5%;
+    .nouveau {
+      margin-left: 73%;
+    }
+    img {
+      height: 200px;
+    }
+  }
+
+  /* Footer */
+
+  footer {
+    h4 {
+      margin-left: 6%;
+    }
+    .partenariat {
+      margin-left: 6%;
+    }
+    .mentions-legales {
+      margin-left: 6%;
+    }
+    .contact {
+      margin-left: 6%;
+    }
+  }
+
+  /* Menu - Restaurant */
+
+  /* Header - Menu */
+
+  .header-menu {
+    img {
+      height: 300px;
+    }
+  }
+
+  /* Main - Menu */
+
+  .carte-menu {
+    width: 100%;
+  }
+
+  /* Section - Entrée Plats Desserts */
+
+  .entrees-plats-desserts {
+    .choix {
+      width: 100%;
+    }
+
+    .choix-plat {
+      .plat {
+        width: 100%;
+      }
+    }
+  }
+
+  /* Section - Commander */
+
+  .commander {
+    .passer-la-commande {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+  }
+
+  /* Footer - Menu */
+
+  footer {
+    h4 {
+      margin-left: 6%;
+    }
+    .partenariat {
+      margin-left: 6%;
+    }
+    .mentions-legales {
+      margin-left: 6%;
+    }
+    .contact {
+      margin-left: 6%;
+    }
+  }
+}

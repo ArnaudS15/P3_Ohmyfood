@@ -1,0 +1,1282 @@
+@charset "UTF-8";
+/* Media Query tablette et desktop */
+/* Animation du coeur */
+.restaurants_liste {
+  width: 95%;
+  margin: auto;
+  padding-bottom: 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px #d4d4d4;
+  position: relative;
+}
+.restaurants_liste:hover {
+  box-shadow: 0 0 10px #9356DC;
+  cursor: pointer;
+}
+.restaurants_liste_heart {
+  font-size: 25px;
+  position: absolute;
+  right: 45px;
+  bottom: 45px;
+  color: #4b4b4b;
+}
+.restaurants_liste_heart--empty {
+  position: absolute;
+  z-index: 2;
+}
+.restaurants_liste_heart--empty:hover {
+  animation: vide 1s forwards linear;
+  cursor: pointer;
+}
+.restaurants_liste_heart--empty:hover + i {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 1s linear;
+}
+.restaurants_liste_heart--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(to top, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  color: transparent;
+  transform-origin: bottom;
+  transform: scale(0);
+}
+
+.resto {
+  background-color: #f6f6f6;
+  border-radius: 50px 50px 0 0;
+  margin-top: -60px;
+  position: relative;
+}
+.resto_titre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px 0px 15px;
+  margin-bottom: -15px;
+}
+@media (min-width: 768px) {
+  .resto_titre {
+    justify-content: center;
+  }
+}
+.resto_titre_nom {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.6em;
+}
+@media (min-width: 768px) {
+  .resto_titre_nom {
+    padding-right: 20px;
+  }
+}
+.resto_titre_nom_heart {
+  font-size: 25px;
+  margin: 0 50px 30px 0;
+  color: #4b4b4b;
+}
+.resto_titre_nom_heart--empty {
+  position: absolute;
+  z-index: 2;
+}
+.resto_titre_nom_heart--empty:hover {
+  animation: vide 1s forwards linear;
+  cursor: pointer;
+}
+.resto_titre_nom_heart--empty:hover + i {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 1s linear;
+}
+.resto_titre_nom_heart--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(to top, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  color: transparent;
+  transform-origin: bottom;
+  transform: scale(0);
+}
+
+/* Animation du loading spinner*/
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 42px;
+  animation: loaderKick 0.3s ease forwards 3s;
+}
+.loader p {
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+  font-size: 40px;
+  animation: color 1.2s ease-in-out infinite;
+}
+.loader__color {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 50%;
+}
+.loader__color div {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #ff79da;
+  border-radius: 50%;
+  animation: spinnerOne 1.2s linear infinite;
+}
+
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+    border-width: 9px;
+    border-top-color: #9356dc;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 3px;
+    border-top-color: #ff79da;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 9px;
+    border-top-color: #9356dc;
+  }
+}
+@keyframes spinnerTwo {
+  0% {
+    transform: rotate(0deg);
+    border-width: 3px;
+    border-bottom-color: #9356dc;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 9px;
+    border-bottom-color: #ff79da;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 3px;
+    border-bottom-color: #9356dc;
+  }
+}
+@keyframes loaderKick {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Animation des menus */
+@keyframes chargement-menu {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/* Animation ajout d'un plat */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* PARAMETRES GENERAUX */
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a {
+  color: #000000;
+}
+a:link {
+  text-decoration: none;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+/* Réinitialisation du rôle d'affichage HTML5 pour les navigateurs plus anciens */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Définition de la police personnalisée */
+h1,
+h4 {
+  font-family: "Shrikhand", cursive;
+}
+
+h2,
+h3,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Main Wrapper */
+#main-wrapper {
+  border: solid #ffffff 1px;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Header */
+header {
+  border: none #007f46 1px;
+}
+
+h1 {
+  border: none #ff0000 1px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.localisation {
+  border: none #ffb27f 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50px;
+  background-color: #eaeaea;
+}
+.localisation i {
+  border: none #0094ff 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+.localisation input {
+  border: none #ff006e 1px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.localisation input:focus {
+  outline: none;
+}
+
+.slogan {
+  border: none #ff7fed 1px;
+  background-color: #f6f6f6;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.slogan h2 {
+  border: none #ff6a00 1px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.slogan .description {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 29px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.slogan .explorer {
+  border: none #b6ff00 0px;
+  border-radius: 25px 25px 25px 25px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 3px 3px 5px #c5c5c5;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 55px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 15px 20px 15px 20px;
+}
+
+.explorer:hover {
+  box-shadow: 2px 2px 3px #808080;
+  background: linear-gradient(#ff94e1, #a06be1);
+}
+
+/* Main */
+main {
+  border: none #a0a0a0 1px;
+}
+
+/* Section - Fonctionnement */
+.fonctionnement {
+  border: none #00ff21 1px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 65px;
+}
+.fonctionnement h2 {
+  border: none #ff6a00 1px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 80%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  margin-left: 5%;
+  margin-right: 15%;
+}
+
+.info-fonctionnement {
+  border: none #7fffc5 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.processus {
+  border: none #0026ff 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 25px 0px 0px 0px;
+}
+.processus .numero {
+  border: none #9356dc 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px 25px 25px 25px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #9356dc;
+  color: #ffffff;
+  position: relative;
+  left: 15px;
+}
+.processus .phase {
+  border: none #000000 1px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  border-radius: 15px 15px 15px 15px;
+  margin-right: 7.5%;
+  background-color: #f6f6f6;
+  box-shadow: 3px 3px 5px #c5c5c5;
+}
+.processus .phase i {
+  border: none #0094ff 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  color: #7e7e7e;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 8%;
+}
+.processus .phase h3 {
+  border: none #ffd800 1px;
+  font-size: 16px;
+  font-weight: bold;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-overflow: ellipsis;
+}
+.processus .phase:hover {
+  background-color: #f5edff;
+}
+.processus .phase:hover i {
+  color: #9356dc;
+}
+
+/* Section - Restaurant */
+.restaurant {
+  border: none #7fc9ff 1px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant h2 {
+  border: none #ff6a00 1px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 80%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 5px;
+  margin-left: 5%;
+  margin-right: 6.5%;
+}
+
+.choix-restaurant {
+  border: none #00ff90 1px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.information-restaurant {
+  position: relative;
+  border: none #4800ff 1px;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 5.5%;
+  margin-right: 5.5%;
+  box-shadow: 3px 3px 5px #c5c5c5;
+}
+.information-restaurant:hover {
+  box-shadow: 3px 3px 2px #808080;
+}
+.information-restaurant .nouveau {
+  border: solid #99e2d0 1px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #99e2d0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #008766;
+  padding: 10px 15px 10px 15px;
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+}
+.information-restaurant img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 175px;
+}
+.information-restaurant .information {
+  border: none #5b7f00 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px 0px 15px 0px;
+}
+.information-restaurant .information i {
+  border: none #0094ff 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px 0px 0px;
+}
+.information-restaurant .nom-restaurant {
+  border: none #7f0000 1px;
+  margin: 0px 0px 0px 10px;
+}
+.information-restaurant .nom-restaurant h3 {
+  border: none #ffd800 1px;
+  font-size: 16px;
+  font-weight: bold;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0px 0px 5px 0px;
+}
+.information-restaurant .nom-restaurant .quartier {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  border: none #00ffff 1px;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+}
+footer .infos {
+  border: none #ff69b4 1px;
+  display: flex;
+  flex-direction: column;
+}
+footer h4 {
+  border: none #c0c0c0 1px;
+  width: fit-content;
+  font-size: 16px;
+  color: #ffffff;
+  width: 25%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  top: 25px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: 7%;
+}
+footer p {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+}
+footer .mentions-legales {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-left: 7%;
+}
+footer .contact {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+  margin-bottom: 35px;
+  margin-left: 7%;
+}
+footer .partenariat {
+  border: none #7f6a00 1px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  margin-left: 7%;
+}
+footer .partenariat i {
+  border: none #0094ff 1px;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+/* Menu - Restaurant */
+/* Header */
+.header-menu {
+  border: none #007f46 1px;
+}
+.header-menu img {
+  border: none #ff00dc 1px;
+  width: 100%;
+  height: 250px;
+}
+.header-menu .bandeau-menu {
+  border: none #ffb27f 1px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.header-menu .bandeau-menu i {
+  border: none #0094ff 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+.header-menu .bandeau-menu .appellation {
+  border: none #ff0000 1px;
+}
+
+/* Main */
+.carte-menu {
+  border: none #f6f6f6 1px;
+  border-radius: 30px 30px 0px 0px;
+  background-color: #f6f6f6;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  margin: -30px 0px 0px 0px;
+}
+
+/* Section - Dénomination restaurant*/
+.denomination-restaurant {
+  border: none #7fffc5 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 0px 30px 0px;
+}
+.denomination-restaurant .designation {
+  border: none #ff6a00 1px;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  margin: 35px 0px 0px 20px;
+}
+.denomination-restaurant i {
+  border: none #0094ff 1px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 35px 0px 0px;
+}
+
+/* Section - Entrée Plats Desserts */
+.entrees-plats-desserts {
+  border: none #004a7f 1px;
+  margin: 0px 0px 23px 0px;
+}
+.entrees-plats-desserts .intitule-plat {
+  border: none #ff00dc 1px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 3px 0px;
+}
+.entrees-plats-desserts .intitule-plat .alimentation {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0px 0px 5px 15px;
+}
+.entrees-plats-desserts .intitule-plat .trait {
+  border: none #0094ff 1px;
+  background-color: #99e4d0;
+  width: 40px;
+  height: 3px;
+  margin: 0px 0px 0px 15px;
+}
+.entrees-plats-desserts .choix {
+  border: none #ff45ab 0px;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 61px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px #c5c5c5;
+  overflow: hidden;
+  margin: 7px 0px 7px 0px;
+  animation-name: chargement-menu;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+.entrees-plats-desserts .choix:hover {
+  box-shadow: 3px 3px 2px #808080;
+}
+.entrees-plats-desserts .choix:hover .carre {
+  transform: translateX(-61px);
+  transition-duration: 0.4s;
+}
+.entrees-plats-desserts .choix:hover .fa-check {
+  animation-name: rotation;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+.entrees-plats-desserts .choix:hover .nom-plat {
+  width: 150px;
+  text-overflow: ellipsis;
+}
+.entrees-plats-desserts .choix:hover .composition {
+  width: 150px;
+  text-overflow: ellipsis;
+}
+.entrees-plats-desserts .choix:hover .prix {
+  transform: translateX(-61px);
+}
+.entrees-plats-desserts .choix-plat {
+  border: none #3f7f47 1px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 15px 0px 15px;
+}
+.entrees-plats-desserts .choix-plat .plat {
+  border: none #ff006e 1px;
+  border-radius: 15px 15px 15px 15px;
+  width: 100%;
+  height: 61px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.entrees-plats-desserts .choix-plat .plat .carre {
+  border: solid;
+  border-color: #99e2d0;
+  border-width: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 61px;
+  height: 61px;
+  background-color: #99e2d0;
+  position: absolute;
+  right: -61px;
+  top: 0px;
+}
+.entrees-plats-desserts .choix-plat .plat .fa-check {
+  border: solid;
+  border-color: #ffffff;
+  border-width: 1px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #99e2d0;
+  padding: 5px 5px 5px 5px;
+  margin: 16.5px 16.5px 16.5px 16.5px;
+}
+.entrees-plats-desserts .choix-plat .plat .nom-plat {
+  border: none #ffd800 1px;
+  font-size: 16px;
+  font-weight: bold;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 15px 0px 0px 10px;
+}
+.entrees-plats-desserts .choix-plat .plat .info-plat {
+  border: none #000000 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 20px 10px 10px;
+}
+.entrees-plats-desserts .choix-plat .plat .info-plat .composition {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+}
+.entrees-plats-desserts .choix-plat .plat .info-plat .prix {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* Section - Commander */
+.commander {
+  border: none #8a2be2 1px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+.commander .passer-la-commande {
+  border: none #b6ff00 0px;
+  border-radius: 25px 25px 25px 25px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 3px 3px 5px #c5c5c5;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 60px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 15px 20px 15px 20px;
+}
+
+.passer-la-commande:hover {
+  box-shadow: 2px 2px 3px #808080;
+  background: linear-gradient(#ff94e1, #a06be1);
+}
+
+/* Footer */
+.footer-menu {
+  border: none #00ffff 1px;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+}
+.footer-menu .infos {
+  border: none #ff69b4 1px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-menu h4 {
+  border: none #c0c0c0 1px;
+  width: fit-content;
+  font-size: 16px;
+  color: #ffffff;
+  width: 25%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  top: 25px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: 7%;
+}
+.footer-menu p {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+}
+.footer-menu .mentions-legales {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-left: 7%;
+}
+.footer-menu .contact {
+  border: none #b6ff00 1px;
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+  margin-bottom: 35px;
+  margin-left: 7%;
+}
+.footer-menu .partenariat {
+  border: none #7f6a00 1px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  margin-left: 7%;
+}
+.footer-menu .partenariat i {
+  border: none #0094ff 1px;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+/* VERSION TABLETTE */
+@media (min-width: 375px) and (max-width: 768px) {
+  /* PARAMETRES GENERAUX */
+  /* Main Wrapper*/
+  #main-wrapper {
+    max-width: 768px;
+  }
+
+  /* Animation du loading spinner*/
+  .loader::after {
+    left: 30%;
+  }
+
+  /* Header */
+  h1 {
+    font-size: 35px;
+  }
+
+  .slogan .explorer {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  /* Section - Fonctionnement */
+  .processus {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* Section - Restaurant */
+  .restaurant h2 {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .information-restaurant {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .information-restaurant .nouveau {
+    margin-left: 73%;
+  }
+  .information-restaurant img {
+    height: 200px;
+  }
+
+  /* Footer */
+  footer h4 {
+    margin-left: 6%;
+  }
+  footer .partenariat {
+    margin-left: 6%;
+  }
+  footer .mentions-legales {
+    margin-left: 6%;
+  }
+  footer .contact {
+    margin-left: 6%;
+  }
+
+  /* Menu - Restaurant */
+  /* Header - Menu */
+  .header-menu img {
+    height: 300px;
+  }
+
+  /* Main - Menu */
+  .carte-menu {
+    width: 100%;
+  }
+
+  /* Section - Entrée Plats Desserts */
+  .entrees-plats-desserts .choix {
+    width: 100%;
+  }
+  .entrees-plats-desserts .choix-plat .plat {
+    width: 100%;
+  }
+
+  /* Section - Commander */
+  .commander .passer-la-commande {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  /* Footer - Menu */
+  footer h4 {
+    margin-left: 6%;
+  }
+  footer .partenariat {
+    margin-left: 6%;
+  }
+  footer .mentions-legales {
+    margin-left: 6%;
+  }
+  footer .contact {
+    margin-left: 6%;
+  }
+}
+/* VERSION DESKTOP */
+@media (min-width: 769px) {
+  /* PARAMETRES GENERAUX */
+  /* Wrapper*/
+  #main-wrapper {
+    max-width: 1400px;
+  }
+
+  /* Loader */
+  .loader::after {
+    left: 46%;
+  }
+
+  /* Header */
+  h1 {
+    font-size: 40px;
+  }
+
+  .slogan .explorer {
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+
+  /* Section - Fonctionnement */
+  .processus {
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  /* Section - Restaurant */
+  .restaurant h2 {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .choix-restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .information-restaurant {
+    width: 35%;
+  }
+  .information-restaurant img {
+    height: 300px;
+  }
+
+  /* Footer */
+  footer h4 {
+    margin-left: 5%;
+  }
+  footer .partenariat {
+    margin-left: 5%;
+  }
+  footer .mentions-legales {
+    margin-left: 5%;
+  }
+  footer .contact {
+    margin-left: 5%;
+  }
+
+  /* Menu - Restaurant */
+  /* Header - Menu */
+  .header-menu img {
+    height: 300px;
+  }
+
+  /* Main - Menu */
+  .carte-menu {
+    max-width: 1400px;
+  }
+
+  /* Section - Entrée Plats Desserts */
+  .entrees-plats-desserts {
+    margin-bottom: 30px;
+  }
+  .entrees-plats-desserts .intitule-plat {
+    margin-bottom: 10px;
+  }
+  .entrees-plats-desserts .choix {
+    width: 100%;
+  }
+  .entrees-plats-desserts .choix-plat .plat {
+    width: 100%;
+  }
+
+  /* Section - Commander */
+  .commander .passer-la-commande {
+    margin-top: 45px;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  /* Footer - Menu */
+  footer h4 {
+    margin-left: 6%;
+  }
+  footer .partenariat {
+    margin-left: 6%;
+  }
+  footer .mentions-legales {
+    margin-left: 6%;
+  }
+  footer .contact {
+    margin-left: 6%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

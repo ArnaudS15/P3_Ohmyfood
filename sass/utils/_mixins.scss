@@ -1,0 +1,410 @@
+@mixin format_h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+@mixin format_h3 {
+  font-size: 16px;
+  font-weight: bold;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin format_h4 {
+  width: fit-content;
+  font-size: 16px;
+}
+
+@mixin format_p {
+  font-size: 15px;
+  font-weight: normal;
+  /* Nécessaires pour text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin ombre {
+  box-shadow: 3px 3px 5px #c5c5c5;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin vignette-etape {
+  .numero {
+    border: $border-display $section-numero-border-color 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px 25px 25px 25px;
+    @include format_p;
+    background-color: $section-numero-background-color;
+    color: $section-numero-text-color;
+    position: relative;
+    left: 15px;
+  }
+  .phase {
+    border: $border-display $section-phase-border-color 1px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    border-radius: 15px 15px 15px 15px;
+    margin-right: 7.5%;
+    background-color: $section-phase-background-color;
+    @include ombre;
+    i {
+      border: $border-display $section-i-border-color 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      color: $section-i-fonctionnement-color;
+      margin-top: 25px;
+      margin-bottom: 20px;
+      margin-left: 10%;
+      margin-right: 8%;
+    }
+    h3 {
+      border: $border-display $section-h3-border-color 1px;
+      @include format_h3;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      margin-top: 25px;
+      margin-bottom: 20px;
+      margin-left: 0px;
+      margin-right: 0px;
+      text-overflow: ellipsis;
+    }
+  }
+  .phase:hover {
+    background-color: $section-hover-phase-background-color;
+    i {
+      color: $section-hover-i-fonctionnement-color;
+    }
+  }
+}
+
+@mixin vignette-restaurant {
+  border: $border-display $section-vignette-border-color 1px;
+  border-radius: 15px 15px 15px 15px;
+  background-color: $section-information-restaurant-background-color;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 5.5%;
+  margin-right: 5.5%;
+  @include ombre;
+  &:hover {
+    box-shadow: 3px 3px 2px #808080;
+  }
+  .nouveau {
+    border: solid #99e2d0 1px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #99e2d0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #008766;
+    padding: 10px 15px 10px 15px;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+  }
+  img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 175px;
+  }
+  .information {
+    border: $border-display $section-information-border-color 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0px 15px 0px;
+    i {
+      border: $border-display $section-i-border-color 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 20px 0px 0px;
+    }
+  }
+  .nom-restaurant {
+    border: $border-display $section-nom-restaurant-border-color 1px;
+    margin: 0px 0px 0px 10px;
+    h3 {
+      border: $border-display $section-h3-border-color 1px;
+      @include format_h3;
+      margin: 0px 0px 5px 0px;
+    }
+    .quartier {
+      border: $border-display $section-quartier-border-color 1px;
+      @include format_p;
+    }
+  }
+}
+
+@mixin pied-de-page {
+  border: $border-display $footer-border-color 1px;
+  background-color: $footer-background-color;
+  display: flex;
+  flex-direction: column;
+  .infos {
+    border: $border-display $footer-infos-border-color 1px;
+    display: flex;
+    flex-direction: column;
+  }
+  h4 {
+    border: $border-display $footer-h4-border-color 1px;
+    @include format_h4;
+    color: $footer-h4-color;
+    width: 25%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    top: 25px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 7%;
+  }
+  p {
+    border: $border-display $footer-p-border-color 1px;
+    @include format_p;
+    color: $footer-p-color;
+  }
+  .mentions-legales {
+    border: $border-display $footer-p-border-color 1px;
+    @include format_p;
+    color: $footer-p-color;
+    margin-bottom: 10px;
+    margin-left: 7%;
+  }
+  .contact {
+    border: $border-display $footer-p-border-color 1px;
+    @include format_p;
+    color: $footer-p-color;
+    margin-bottom: 35px;
+    margin-left: 7%;
+  }
+  .partenariat {
+    border: $border-display $footer-partenariat-border-color 1px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    margin-left: 7%;
+    i {
+      border: $border-display $footer-i-border-color 1px;
+      width: 20px;
+      height: 20px;
+      color: $footer-i-color;
+      margin-right: 10px;
+    }
+  }
+}
+
+@mixin entete-menu {
+  border: $border-display $header-menu-border-color 1px;
+  img {
+    border: $border-display $header-menu-img-border-color 1px;
+    width: 100%;
+    height: 250px;
+  }
+  .bandeau-menu {
+    border: $border-display $header-bandeau-menu-border-color 1px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    i {
+      border: $border-display $header-bandeau-menu-i-border-color 1px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 20px;
+      left: 16px;
+    }
+    .appellation {
+      border: $border-display $header-bandeau-menu-h1-border-color 1px;
+    }
+  }
+}
+
+@mixin titre-plat {
+  display: flex;
+  flex-direction: column;
+  .alimentation {
+    border: $border-display $section-alimentation-border-color 1px;
+    @include format_p;
+    margin: 0px 0px 5px 15px;
+  }
+  .trait {
+    border: $border-display $section-trait-border-color 1px;
+    background-color: $section-trait-background-color;
+    width: 40px;
+    height: 3px;
+    margin: 0px 0px 0px 15px;
+  }
+}
+
+@mixin vignette-plat {
+  border: $border-display $section-entrees-plats-desserts-border-color 1px;
+  margin: 0px 0px 23px 0px;
+  .intitule-plat {
+    border: $border-display $section-intitule-plat-border-color 1px;
+    @include titre-plat;
+    margin: 0px 0px 3px 0px;
+  }
+  .choix {
+    border: $border-display $section-choix-border-color 0px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: $section-plat-background-color;
+    width: 100%;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include ombre;
+    overflow: hidden;
+    margin: 7px 0px 7px 0px;
+    animation-name: chargement-menu;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    &:hover {
+      box-shadow: 3px 3px 2px #808080;
+    }
+  }
+  .choix:hover {
+    .carre {
+      transform: translateX(-61px);
+      transition-duration: 0.4s;
+    }
+    .fa-check {
+      animation-name: rotation;
+      animation-duration: 0.4s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+    }
+    .nom-plat {
+      width: 150px;
+      text-overflow: ellipsis;
+    }
+    .composition {
+      width: 150px;
+      text-overflow: ellipsis;
+    }
+    .prix {
+      transform: translateX(-61px);
+    }
+  }
+  .choix-plat {
+    border: $border-display $section-choix-plat-border-color 1px;
+    background-color: $section-choix-plat-background-border-color;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 15px 0px 15px;
+    .plat {
+      border: $border-display $section-plat-border-color 1px;
+      border-radius: 15px 15px 15px 15px;
+      width: 100%;
+      height: 61px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .carre {
+        border: solid;
+        border-color: #99e2d0;
+        border-width: 0px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 61px;
+        height: 61px;
+        background-color: #99e2d0;
+        position: absolute;
+        right: -61px;
+        top: 0px;
+      }
+
+      .fa-check {
+        border: solid;
+        border-color: #ffffff;
+        border-width: 1px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        color: #99e2d0;
+        padding: 5px 5px 5px 5px;
+        margin: 16.5px 16.5px 16.5px 16.5px;
+      }
+
+      .nom-plat {
+        border: $border-display $section-nom-plat-border-color 1px;
+        @include format_h3;
+        margin: 15px 0px 0px 10px;
+      }
+      .info-plat {
+        border: $border-display $section-info-plat-border-color 1px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5px 20px 10px 10px;
+        .composition {
+          border: $border-display $section-composition-border-color 1px;
+          @include format_p;
+        }
+        .prix {
+          border: $border-display $section-prix-border-color 1px;
+          @include format_p;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@mixin coeur {
+  color: $colour-localisation;
+  &--empty {
+      position: absolute;
+      z-index: 2;
+      &:hover {
+          animation: vide 1s forwards linear;
+          cursor: pointer;
+          & + i {
+              opacity: 1;
+              transform: scale(1);
+              transition: transform 1s linear;
+          }
+      }  
+  }
+  &--full {
+      position: absolute;
+      opacity: 0;
+      background: linear-gradient(to top, $secondary, $primary);
+      -webkit-background-clip: text;
+      color: transparent;
+      transform-origin: bottom;
+      transform:scale(0);
+  }
+}
+
+/* Media Query tablette et desktop */
+@mixin both {
+  @media (min-width: 768px) {
+      @content;
+  }  
+}
